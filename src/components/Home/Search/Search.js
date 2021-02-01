@@ -4,7 +4,7 @@ import Button from '../../common/Button'
 
 const SearchForm = styled.form`
     display: flex;
-    margin: 50px 0;
+    margin-bottom: 50px;
 `;
 
 const SearchInput = styled.input`

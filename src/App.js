@@ -7,6 +7,7 @@ import MoviesContainer from './components/Movies/MoviesContainer';
 import TVContainer from './components/TV/TVContainer';
 import PeopleContainer from './components/People/PeopleContainer';
 import HeaderContainer from './components/Header/HeaderContainer';
+import ProfileTemplateContainer from './components/ProfileTemplate/ProfileTemplateContainer';
 import Home from './components/Home/Home';
 
 const App = () => {
@@ -27,6 +28,12 @@ const App = () => {
 
 					<Route exact path='/people' 
 						render={ () => <PeopleContainer /> } />
+					
+					<Route exact path='/movie/:id' 
+						render={ () => <ProfileTemplateContainer /> } />
+
+					<Route exact path='/tv/:id' 
+						render={ () => <ProfileTemplateContainer /> } />
 					{/* <Route exact path='/login' 
 						render={ () => <Login /> } /> */}
 				</Row>

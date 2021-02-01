@@ -6,7 +6,7 @@ const SidebarStyled = styled.div`
     flex-direction: column;
     justify-content: space-between;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.6px;
     color: #fff;

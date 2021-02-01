@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import PersonCard from '../common/PersonCard';
 
 const PeopleTitle = styled.div`
-    margin-top: 40px;
     margin-bottom: 25px;
     font-family: 'Ubuntu', sans-serif;
     font-size: 30px;

@@ -23,6 +23,9 @@ const CardTitle = styled.div`
     margin-bottom: 4px;
     font-size: 18px;
     font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 `;
 
 const CardGenre = styled.div`
@@ -50,10 +53,9 @@ const CardValue = styled.div`
     margin-left:8px;
 `;
 
-
-const Card = ({ item }) => (
+const Card = ({ item, category }) => (
         <CardStyled>
-            <NavLink to='/'>
+            <NavLink to={`/${category}/${item.id}`}>
                 <CardImg src={item.poster_path 
                         ? IMG_API + item.poster_path 
                         : '../../img/no-poster.jpg'} 

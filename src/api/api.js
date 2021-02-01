@@ -75,3 +75,18 @@ export const peopleAPI = {
 		})
 	}
 };
+
+export const profileAPI = {
+	getProfile (id, category) {
+		return instance.get(`/${category}/${id}?api_key=93f9bc4e7b4acda0fc30a502693f4ea2`)
+		.then(response => {
+			return response.data;
+		})
+	},
+	getSimilars (id, category) {
+		return instance.get(`/${category}/${id}/similar?api_key=93f9bc4e7b4acda0fc30a502693f4ea2`)
+		.then(response => {
+			return response.data.results;
+		})
+	}
+};

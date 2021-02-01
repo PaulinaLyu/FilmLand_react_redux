@@ -5,6 +5,7 @@ import homeReducer from './homeReducer';
 import moviesReducer from './moviesReducer';
 import tvReducer from './tvReducer';
 import peopleReducer from './peopleReducer';
+import profileReducer from './profileReducer';
 import authReducer from './authReducer';
 
 let reducers = combineReducers ({
@@ -12,6 +13,7 @@ let reducers = combineReducers ({
 	moviesPage: moviesReducer,
 	tvPage: tvReducer,
 	peoplePage: peopleReducer,
+	profilePage: profileReducer,
 	auth: authReducer,
 });
 

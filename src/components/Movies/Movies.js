@@ -15,19 +15,21 @@ const MoviesInner = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: .1rem;
 `;
 
 const Movies = ({ movies, getPopular, getNowPlaying, getUpcoming, getTopRated }) => (
     <>
-        <Col xs={2} className='mt-5'>
+        <Col xs={2} className='pl-0 pr-5'>
             <Sidebar itemNames={["Popular", "Now Playing", "Upcoming", "Top Rated"]}
                 onClick={[getPopular, getNowPlaying, getUpcoming, getTopRated]} />
         </Col>
-        <Col xs={10} className='mt-5'>
+        <Col xs={10} className='pr-0'>
             <MoviesTitle>Movies</MoviesTitle>
             <MoviesInner>
                 {movies.map(item => <Card 
-                    item={item} 
+                    item={item}
+                    category='movie'
                     key={item.id} />
                 )}
             </MoviesInner>

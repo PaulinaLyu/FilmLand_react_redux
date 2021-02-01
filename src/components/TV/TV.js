@@ -15,19 +15,21 @@ const TVInner = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: .1rem;
 `;
 
 const TV = ({ tv, getPopular, getAiringToday, getOnTv, getTopRated }) => (
     <>
-        <Col xs={2} className='mt-5'>
+        <Col xs={2} className='pl-0 pr-5'>
             <Sidebar itemNames={["Popular", "Airing Today", "On TV", "Top Rated"]}
                 onClick={[getPopular, getAiringToday, getOnTv, getTopRated]} />
         </Col>
-        <Col xs={10} className='mt-5'>
+        <Col xs={10} className='pr-0'>
             <TVTitle>TV Shows</TVTitle>
             <TVInner>
                 {tv.map(item => <Card 
-                    item={item} 
+                    item={item}
+                    category='tv' 
                     key={item.id} />
                 )}
             </TVInner>

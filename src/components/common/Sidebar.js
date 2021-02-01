@@ -22,12 +22,12 @@ const SidebarItem = styled.div`
     }
 `;
 
-const Sidebar = ({ getPopular, getNowPlaying, getUpcoming, getTopRated }) => (
+const Sidebar = ({ itemNames, onClick }) => (
     <SidebarStyled>
-        <SidebarItem onClick={ () => {getPopular()}}>Popular</SidebarItem>
-        <SidebarItem onClick={ () => {getNowPlaying()}}>Now Playing</SidebarItem>
-        <SidebarItem onClick={ () => {getUpcoming()}}>Upcoming</SidebarItem>
-        <SidebarItem onClick={ () => {getTopRated()}}>Top Rated</SidebarItem>
+        <SidebarItem onClick={ () => {onClick[0]()}}>{itemNames[0]}</SidebarItem>
+        <SidebarItem onClick={ () => {onClick[1]()}}>{itemNames[1]}</SidebarItem>
+        <SidebarItem onClick={ () => {onClick[2]()}}>{itemNames[2]}</SidebarItem>
+        <SidebarItem onClick={ () => {onClick[3]()}}>{itemNames[3]}</SidebarItem>
     </SidebarStyled>
 )
 

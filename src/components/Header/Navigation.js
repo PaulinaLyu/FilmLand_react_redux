@@ -16,13 +16,12 @@ const NavigationLink = styled.div`
 
     :active {
         color: #ff55a5;
-        font-weight: 500;
     }
 `;
 
 const Navigation = () => (
 	<NavigationStyled>
-		<NavLink to='/' >
+		<NavLink exact to='/' >
            <NavigationLink>Home</NavigationLink>
         </NavLink>
 		<NavLink to='/movies'>

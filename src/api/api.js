@@ -39,3 +39,30 @@ export const moviesAPI = {
 		})
 	}
 };
+
+export const tvAPI = {
+	getPopular () {
+		return instance.get(`tv/popular?api_key=93f9bc4e7b4acda0fc30a502693f4ea2`)
+		.then(response => {
+			return response.data.results;
+		})
+	},
+	getAiringToday () {
+		return instance.get(`tv/airing_today?api_key=93f9bc4e7b4acda0fc30a502693f4ea2`)
+		.then(response => {
+			return response.data.results;
+		})
+	},
+	getOnTv () {
+		return instance.get(`tv/on_the_air?api_key=93f9bc4e7b4acda0fc30a502693f4ea2`)
+		.then(response => {
+			return response.data.results;
+		})
+	},
+	getTopRated() {
+		return instance.get(`tv/top_rated?api_key=93f9bc4e7b4acda0fc30a502693f4ea2`)
+		.then(response => {
+			return response.data.results;
+		})
+	}
+};

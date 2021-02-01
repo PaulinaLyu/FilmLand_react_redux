@@ -76,5 +76,4 @@ export const getTopRated = () => {
 	}
 };
 
-
 export default moviesReducer;

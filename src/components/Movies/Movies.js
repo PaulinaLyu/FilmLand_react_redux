@@ -20,10 +20,8 @@ const MoviesInner = styled.div`
 const Movies = ({ movies, getPopular, getNowPlaying, getUpcoming, getTopRated }) => (
     <>
         <Col xs={2} className='mt-5'>
-            <Sidebar getPopular={getPopular} 
-                getNowPlaying={getNowPlaying} 
-                getUpcoming={getUpcoming} 
-                getTopRated={getTopRated} />
+            <Sidebar itemNames={["Popular", "Now Playing", "Upcoming", "Top Rated"]}
+                onClick={[getPopular, getNowPlaying, getUpcoming, getTopRated]} />
         </Col>
         <Col xs={10} className='mt-5'>
             <MoviesTitle>Movies</MoviesTitle>

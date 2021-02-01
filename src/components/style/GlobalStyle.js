@@ -58,4 +58,8 @@ export const GlobalStyle = createGlobalStyle`
 			outline: none;
 		}
 	}
+	
+	.active {
+		color: #ff55a5;
+	}
 `;

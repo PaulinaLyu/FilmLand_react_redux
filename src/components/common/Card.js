@@ -1,18 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import myImage from '../../film.jpg';
+
+const IMG_API = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2'
 
 const CardStyled = styled.div`
     width: 20%;
     margin-bottom: 55px;
-    margin-right: 20px;
 `;
 
-const CardImg = styled.div`
+const CardImg = styled.img`
     width: 100%;
-    height: 400px;
-    background-image: url(${myImage});
+    height: auto;
+    border-radius: 3px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -21,7 +21,7 @@ const CardImg = styled.div`
 const CardTitle = styled.div`
     margin-top: 15px;
     margin-bottom: 4px;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
 `;
 
@@ -50,21 +50,25 @@ const CardValue = styled.div`
     margin-left:8px;
 `;
 
-const Card = ({ item }) => {
-    console.log(item);
+
+const Card = ({ item }) => {    
+
     return (
-    <CardStyled>
-        <NavLink to='/'>
-            <CardImg />
-        </NavLink>
-        <CardTitle>{item.title || item.name}</CardTitle>
-        <CardGenre>Comedy, Drama</CardGenre>
-        <CardRate>
-            <CardIcon className="fas fa-star"></CardIcon>
-            <CardValue>{item.vote_average}</CardValue>
-        </CardRate>
+        <CardStyled>
+            <NavLink to='/'>
+                <CardImg src={item.poster_path 
+                        ? IMG_API + item.poster_path 
+                        : '../../img/no-poster.jpg'} 
+                    alt={item.title} 
+                    title={item.title} />
+            </NavLink>
+            <CardTitle>{item.title || item.name}</CardTitle>
+            <CardGenre>{item.release_date}</CardGenre>
+            <CardRate>
+                <CardIcon className="fas fa-star"></CardIcon>
+                <CardValue>{item.vote_average}</CardValue>
+            </CardRate>
     </CardStyled>
-    )
-}
+)}
 
 export default Card;

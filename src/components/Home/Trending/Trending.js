@@ -11,6 +11,7 @@ const TrendingTitle = styled.div`
 
 const TrendingInner = styled.div`
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 `;
 
@@ -18,7 +19,10 @@ const Trending = ({ trending }) => (
     <>
         <TrendingTitle>Trending</TrendingTitle>
         <TrendingInner>
-		    {trending.map(item => <Card item={item} key={item.id} />)}
+            {trending.map(item => <Card 
+                item={item}  
+                key={item.id} />
+            )}
 	    </TrendingInner>
     </>
 )

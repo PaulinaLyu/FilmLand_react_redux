@@ -1,4 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import thunkMiddleware from "redux-thunk";
 import homeReducer from './homeReducer';
 import moviesReducer from './moviesReducer';
@@ -14,6 +15,6 @@ let reducers = combineReducers ({
 	auth: authReducer,
 });
 
-let store = createStore(reducers, applyMiddleware(thunkMiddleware));
+let store = createStore(reducers, composeWithDevTools(applyMiddleware(thunkMiddleware)));
 window.store = store;
 export default store;

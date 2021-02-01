@@ -51,9 +51,7 @@ const CardValue = styled.div`
 `;
 
 
-const Card = ({ item }) => {    
-
-    return (
+const Card = ({ item }) => (
         <CardStyled>
             <NavLink to='/'>
                 <CardImg src={item.poster_path 
@@ -69,6 +67,6 @@ const Card = ({ item }) => {
                 <CardValue>{item.vote_average}</CardValue>
             </CardRate>
     </CardStyled>
-)}
+);
 
 export default Card;

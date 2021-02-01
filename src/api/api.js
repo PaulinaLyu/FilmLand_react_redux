@@ -10,7 +10,7 @@ export const homeAPI = {
 		.then(response => {
 			return response.data.results;
 		})
-	},
+	}
 };
 
 export const moviesAPI = {
@@ -61,6 +61,15 @@ export const tvAPI = {
 	},
 	getTopRated() {
 		return instance.get(`tv/top_rated?api_key=93f9bc4e7b4acda0fc30a502693f4ea2`)
+		.then(response => {
+			return response.data.results;
+		})
+	}
+};
+
+export const peopleAPI = {
+	getPopular () {
+		return instance.get(`person/popular?api_key=93f9bc4e7b4acda0fc30a502693f4ea2`)
 		.then(response => {
 			return response.data.results;
 		})

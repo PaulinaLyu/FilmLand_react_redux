@@ -5,6 +5,7 @@ import {NavLink} from 'react-router-dom';
 const LogoStyled = styled.div`
     font-family: 'Ubuntu', sans-serif;
     font-size: 24px;
+    color: #fff;
     font-weight: 500;
     text-transform: uppercase;
         &:hover {
